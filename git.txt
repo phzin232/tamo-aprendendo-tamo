@@ -1,2 +1,0 @@
-git config --global user.email "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"
-git config --global user.name "phzin232"
