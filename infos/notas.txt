@@ -1172,4 +1172,5 @@ Leonardo Santos,103,a fds,asd,9.7
 Leonardo Santos,103,Geografia,atv2,1.8
 Leonardo Santos,103,Geografia,atv1,1.8
 Leonardo Santos,103,Geografia,atv1,1.8
-
+Leonardo Santos,102,Matemática,AA,9.8
+Leonardo Costa,101,Português,teste,8.7

@@ -8,6 +8,7 @@ def load_names():
     nomes_set = set()
     salas_set = set()
     materias_set = set()
+    aluno_sala = {}
 
     with open(pathn, "r", encoding="utf-8") as arquivo:
         for linha in arquivo:
@@ -15,13 +16,17 @@ def load_names():
             if len(partes) != 5:
                 continue           
             nome,sala,materia,_,_ = partes
+
             nomes_set.add(nome)
             salas_set.add(sala)
             materias_set.add(materia)
 
-    return list(nome), list(sala), list(materia)
+            if nome not in aluno_sala:
+                aluno_sala[nome] = []
+            if sala not in aluno_sala[nome]:
+                aluno_sala[nome].append(sala)
 
-
+    return list(nomes_set), list(salas_set), list(materias_set), aluno_sala
 
 
 #Adinicionar nota
