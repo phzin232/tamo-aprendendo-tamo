@@ -1165,3 +1165,11 @@ Rodrigo Nascimento,103,Ciências,Exercício X,7.6
 Rodrigo Nascimento,103,Ciências,Prova 1,6.3
 Leonardo Santos,103,Matem�tica,atividade bimestral 1,8.6
 Leonardo Santos,103,Matemática,atividade bim 2,1.5
+Leonardo Santos,103,Matemática,aa,8.9
+Leonardo Santos,103,Matemática,aa,8.9
+Leonardo Santos,103,Geografia,aaa,1.7
+Leonardo Santos,103,a fds,asd,9.7
+Leonardo Santos,103,Geografia,atv2,1.8
+Leonardo Santos,103,Geografia,atv1,1.8
+Leonardo Santos,103,Geografia,atv1,1.8
+
