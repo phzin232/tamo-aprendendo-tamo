@@ -1,19 +1,13 @@
 import os
+import py.gui as gui
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 pathn = os.path.join(base_dir,"..", "infos", "notas.txt")
 def start():
-    while True:
-        print("1 - Adicionar nota")
-        print("2 - Pesquisar aluno")
-        print("3 - Ver notas por sala")
-        print("4 - Ver média por matéria")
-        print("5 - Sair")
-
-        op = input("Escolha: ")
+    
     #Adinicionar nota
-        if op == "1":
-            nome = input("Nome: ")
+        def add_grade ():
+            nome = gui.entry_nome.get()
             sala = input("Sala: ")
             materia = input("Matéria: ")
             atividade = input("Atividade: ")
@@ -24,8 +18,7 @@ def start():
 
             print("Nota salva!")
     #Pesquisar Aluno
-        elif op == "2":
-            while True:
+        def search_aluno():
                 print("1 - Nota geral do Aluno")
                 print("2 - Nota por matéria")
                 print("3 - Voltar")
@@ -128,10 +121,9 @@ def start():
                     if not sala_encontrado:
                         print("Sala não encontrada.")
                 #Voltar                 
-                elif sub == "3":
-                    break
+
     #Ver notas por Sala
-        elif op == "3":
+        def consult_grade ():
             while True:
                 print("1 - Visão geral")
                 print("2 - Visão detalhada")
@@ -211,7 +203,7 @@ def start():
                 elif sub == "3":
                     break
     #Ver médias por materia
-        elif op == "4":
+        def average_per_subject():
             while True:
                 print("1 - Média por matéria geral")
                 print("2 - Média por matéria da sala ")
@@ -285,5 +277,5 @@ def start():
                 elif sub == "3":
                     break
     #sair
-        elif op == "5":
-            break
+        
+            

@@ -1,4 +1,9 @@
-from py import notas
-from py import app
+from py.backend import notas
+from py.gui import app as gui
 
-notas.start()
+app = gui.App()
+
+
+
+
+app.mainloop()
