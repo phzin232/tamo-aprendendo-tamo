@@ -1,3 +1,8 @@
+import os
+
+base_dir = os.path.dirname(os.path.abspath(__file__))
+pathn = os.path.join(base_dir,"..", "infos", "notas.txt")
+
 while True:
     print("1 - Adicionar nota")
     print("2 - Pesquisar aluno")
@@ -36,7 +41,7 @@ while True:
                 quantidade = 0
                 encontrado = False
                 
-                with open("notas.txt", "r", encoding="utf-8") as arquivo:
+                with open(pathn, encoding="utf-8") as arquivo:
                     for linha in arquivo:
                         partes = linha.strip().split(",")
                         if len(partes) != 5:
@@ -79,7 +84,7 @@ while True:
 
                 linha_encontrado = False
 
-                with open("notas.txt", "r", encoding="utf-8") as arquivo:
+                with open(pathn, encoding="utf-8") as arquivo:
                     for linha in arquivo:
                         partes = linha.strip().split(",")
                         if len(partes) !=5:
@@ -144,7 +149,7 @@ while True:
 
                 notas_por_aluno = {}
 
-                with open("notas.txt", "r", encoding="utf-8") as arquivo:
+                with open(pathn, encoding="utf-8") as arquivo:
                     for linha in arquivo:
                         partes = linha.strip().split(",")
                         if len(partes) != 5:
@@ -180,7 +185,7 @@ while True:
 
                 detalhes_por_aluno = {}
 
-                with open("notas.txt", "r", encoding="utf-8") as arquivo:
+                with open(pathn, encoding="utf-8") as arquivo:
                     for linha in arquivo:
                         partes = linha.strip().split(",")
                         if len(partes) != 5:
@@ -222,7 +227,7 @@ while True:
                 quantidade = 0
                 encontrado = False
 
-                with open("notas.txt", "r", encoding="utf-8") as arquivo:
+                with open(pathn, encoding="utf-8") as arquivo:
                     for linha in arquivo:
                         partes = linha.strip().split(",")
                         if len(partes) != 5:
@@ -250,7 +255,7 @@ while True:
                 sala_encontrado = False
                 materia_encontrado = False
 
-                with open("notas.txt", "r", encoding="utf-8") as arquivo:
+                with open(pathn, encoding="utf-8") as arquivo:
                     for linha in arquivo:
                         partes = linha.strip().split(",")
                         if len(partes) != 5:
