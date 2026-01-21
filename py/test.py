@@ -20,6 +20,7 @@ class Application(tk.Tk):
 
         frame2 = InputForm(self)
         frame2.grid(row = 0, column=1, sticky="nsew",padx=5, pady=5)
+        self.configure(bg="#1e1e1e")
 
 
 class InputForm(ttk.Frame):
@@ -28,6 +29,7 @@ class InputForm(ttk.Frame):
 
         self.columnconfigure(0, weight=1)
         self.rowconfigure(1, weight=1)
+        
 
         self.entry = ttk.Entry(self)
         self.entry.grid(row=0, column=0,sticky="ew")
@@ -42,6 +44,7 @@ class InputForm(ttk.Frame):
 
         self.text_list = tk.Listbox(self)
         self.text_list.grid(row=1, column=0, columnspan=2, sticky="nsew")
+        self.configure(style="Dark.TFrame")
 
     def add_to_list(self):
         text =  self.entry.get()
