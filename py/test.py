@@ -37,6 +37,9 @@ class InputForm(ttk.Frame):
         self.entry_bnt = ttk.Button(self, text="add",command=self.add_to_list)
         self.entry_bnt.grid(row=0, column=1)
 
+        self.entry_bnt = ttk.Button(self, text="Clear",command=self.clear_list)
+        self.entry_bnt.grid(row=0, column=2)
+
         self.text_list = tk.Listbox(self)
         self.text_list.grid(row=1, column=0, columnspan=2, sticky="nsew")
 
@@ -45,6 +48,8 @@ class InputForm(ttk.Frame):
         if text:
             self.text_list.insert(tk.END, text)
             self.entry.delete(0, tk.END)
+    def clear_list(self):
+        self.text_list.delete(0, tk.END)
 
 
 if __name__ == "__main__":
