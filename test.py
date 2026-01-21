@@ -1,4 +1,9 @@
 import tkinter as tk
 
 
-tk._test()
+root = tk.Tk()
+root.title("Monitoramento de notas")
+
+bnt = tk.Button(root, text="Button 1")
+
+root.mainloop()
