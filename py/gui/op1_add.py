@@ -1,5 +1,6 @@
 import customtkinter as ctk
-from py.backend import notas 
+from py.backend import notas
+
 
 # Carrega nomes de alunos
 nomes, salas, materias, aluno_sala = notas.load_names()
@@ -49,6 +50,13 @@ class AddNotaFrame(ctk.CTkFrame):
         # Botão para salvar
         self.btn_add = ctk.CTkButton(self, text="Adicionar Nota", command=self.add_grade)
         self.btn_add.grid(row=8, column=0, pady=10)
+
+
+        self.btn_voltar = ctk.CTkButton(self, text="Voltar", command=parent.voltar_menu)
+        self.btn_voltar.grid(row=9, column=0, pady=5)
+
+
+
 
     # Atualiza sugestões nessa ordem, Nome sala e materia
     def on_keyrelease_nomes(self, event):

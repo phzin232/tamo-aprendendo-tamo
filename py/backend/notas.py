@@ -44,45 +44,36 @@ def search_aluno():
 
         sub = input("Escolha: ")
         #Nota Geral do aluno
-        if sub =="1":
+def geral_gradeb():
+    
+
+    total = 0
+    quantidade = 0
+    encontrado = False
+    
+    with open(pathn, encoding="utf-8") as arquivo:
+        for linha in arquivo:
+            partes = linha.strip().split(",")
+            if len(partes) != 5:
+                continue
+
+            nome, sala, materia, atividade, nota = partes
+
+
+
+            total += float(nota)
+            quantidade += 1
+
+
             
-            nome_busca = input("Nome do aluno: ")
-            sala_busca = input("Sala do aluno: ")
 
-            total = 0
-            quantidade = 0
-            encontrado = False
-            
-            with open(pathn, encoding="utf-8") as arquivo:
-                for linha in arquivo:
-                    partes = linha.strip().split(",")
-                    if len(partes) != 5:
-                        continue
-
-                    nome, sala, materia, atividade, nota = partes
-
-
-                    if nome == nome_busca and sala == sala_busca:
-                        print("Nome:", nome, sala)
-                        print("Matéria:", materia)
-                        print("Atividade:", atividade)
-                        print("Nota:", nota)
-                        print("----")
-                        encontrado = True
-
-                        total += float(nota)
-                        quantidade += 1
-
-
-                    
-
-            if quantidade > 0:
-                print(f"Média geral do aluno: {total / quantidade:.2f}")
-            
-            if not encontrado:
-                print("Aluno não encontrado.")
+    if quantidade > 0:
+        total / quantidade
+    
+    if not encontrado:
+        print("Aluno não encontrado.")
         #Nota por matéria
-        elif sub == "2":
+        def grade_per_subject():
             nome_busca = input("Nome do aluno: ")
             sala_busca = input("Sala do aluno: ")
             materia_busca = input("Nome da matéria: ")
